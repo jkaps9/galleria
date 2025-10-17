@@ -133,8 +133,8 @@ select {
   --color-text-dark: var(--black);
   --color-bg-dark: var(--black);
   --color-bg-light: var(--white);
-  --container-max-width: 70rem;
-  --container-width: 90%;
+  --container-max-width: 85rem;
+  --container-margin: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
   --spacing-0: 0;
   --spacing-100: 0.5rem;
   --spacing-200: 1rem;
@@ -153,14 +153,31 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0 var(--container-margin);
   max-width: var(--container-max-width);
-  width: var(--container-width);
 }
 
+header {
+  border-bottom: 1px solid var(--grey-150);
+}
 header .navbar {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
+}
+header .logo {
+  max-width: 30%;
+}
+header .logo svg {
+  max-width: 100%;
+}
+
+@media (min-width: 64rem) {
+  header {
+    border: none;
+  }
+  header .navbar {
+    border-bottom: 1px solid var(--grey-150);
+  }
 }
