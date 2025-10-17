@@ -91,6 +91,23 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.btn {
+  color: var(--grey-400);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2.571px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+}
+.btn:hover {
+  color: var(--text-dark);
+}
+
+.btn--underline {
+  text-decoration: underline;
+}
+
 :root {
   --white: #ffffff;
   --black: #000000;
