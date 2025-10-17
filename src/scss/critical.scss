@@ -33,8 +33,8 @@
   --color-bg-light: var(--white);
 
   // CONTAINER
-  --container-max-width: 70rem;
-  --container-width: 90%;
+  --container-max-width: 85rem;
+  --container-margin: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
 
   // SPACING
   --spacing-0: 0;
@@ -55,16 +55,25 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0 var(--container-margin);
   max-width: var(--container-max-width);
-  width: var(--container-width);
 }
 
 header {
+  border-bottom: 1px solid var(--grey-150);
   .navbar {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
+  }
+}
+
+@media (min-width: 64rem) {
+  header {
+    border: none;
+    .navbar {
+      border-bottom: 1px solid var(--grey-150);
+    }
   }
 }
