@@ -62,6 +62,9 @@ body {
 
 header {
   .navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
   }
 }
