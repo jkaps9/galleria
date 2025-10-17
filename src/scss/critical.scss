@@ -52,6 +52,8 @@
 body {
   line-height: 1.6em;
   font-family: "Libre Baskerville", sans-serif;
+
+  background-color: var(--color-bg-light);
 }
 
 .container {
@@ -60,7 +62,11 @@ body {
 }
 
 header {
+  background-color: var(--color-bg-light);
   border-bottom: 1px solid var(--grey-150);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   .navbar {
     align-items: center;
     display: flex;
@@ -78,6 +84,7 @@ header {
 }
 
 .gallery {
+  margin: var(--spacing-400) 0;
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
