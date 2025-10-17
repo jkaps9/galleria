@@ -115,6 +115,13 @@ header {
     }
   }
 }
+@media (min-width: 48rem) {
+  .gallery {
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
 
 @media (min-width: 64rem) {
   header {
