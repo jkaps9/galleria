@@ -1,3 +1,20 @@
 {% extends "layouts/base.html" %}
 {% block content %}
+  <section class="gallery">
+    <div class="container">
+      <div class="gallery__grid">
+        {% for painting in paintings %}
+          <div class="gallery__item">
+            <img
+              class="item__image"
+              src="{{ painting.images.thumbnail }}"
+              alt="{{ painting.name }} by {{ painting.artist.name }}"
+            />
+            <h2 class="item__title">{{ painting.name }}</h2>
+            <p class="item__artist">{{ painting.artist.name }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 {% endblock %}
