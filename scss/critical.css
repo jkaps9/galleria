@@ -92,13 +92,18 @@ select {
   }
 }
 .btn {
+  background-color: transparent;
+  border: none;
   color: var(--grey-400);
+  cursor: pointer;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2.571px;
   line-height: 1;
+  padding: 0;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .btn:hover {
   color: var(--text-dark);
@@ -154,5 +159,8 @@ body {
 }
 
 header .navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
 }
