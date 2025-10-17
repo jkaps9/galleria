@@ -14,13 +14,13 @@
     <link
       rel="icon"
       type="image/png"
+      sizes="32x32"
       href="{{ '/assets/images/favicon-32x32.png' | url }}"
     />
   </head>
   <body>
     {% include "partials/site-header.html" %}
     <main>{% block content %}{% endblock %}</main>
-    {% include "partials/site-footer.html" %}
     <script src="{{ '/main.js' | url }}"></script>
   </body>
 </html>
