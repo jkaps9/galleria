@@ -67,6 +67,14 @@ header {
     justify-content: space-between;
     padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
   }
+
+  .logo {
+    max-width: 30%;
+
+    svg {
+      max-width: 100%;
+    }
+  }
 }
 
 @media (min-width: 64rem) {
