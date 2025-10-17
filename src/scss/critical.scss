@@ -51,7 +51,7 @@
 
 body {
   line-height: 1.6em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Libre Baskerville", sans-serif;
 }
 
 .container {
@@ -73,6 +73,38 @@ header {
 
     svg {
       max-width: 100%;
+    }
+  }
+}
+
+.gallery {
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-500);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  .item {
+    &__details {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: var(--spacing-400);
+      color: var(--color-text-light);
+    }
+
+    &__title {
+      @include mixins.text-preset-2;
+      margin-bottom: var(--spacing-100);
+    }
+
+    &__artist {
+      @include mixins.text-preset-5;
+      opacity: 0.75;
     }
   }
 }

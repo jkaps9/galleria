@@ -10,8 +10,10 @@
               src="{{ painting.images.thumbnail }}"
               alt="{{ painting.name }} by {{ painting.artist.name }}"
             />
-            <h2 class="item__title">{{ painting.name }}</h2>
-            <p class="item__artist">{{ painting.artist.name }}</p>
+            <div class="item__details">
+              <h2 class="item__title">{{ painting.name }}</h2>
+              <p class="item__artist">{{ painting.artist.name }}</p>
+            </div>
           </div>
         {% endfor %}
       </div>
