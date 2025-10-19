@@ -183,11 +183,13 @@ header .logo svg {
 }
 .gallery__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: var(--spacing-500);
+  align-items: end;
 }
 .gallery__item {
   position: relative;
+  max-width: 310px;
 }
 .gallery .item__details {
   position: absolute;
@@ -197,10 +199,10 @@ header .logo svg {
   color: var(--color-text-light);
 }
 .gallery .item__title {
-  font-size: clamp(1.5rem, -0.4702rem + 2.5685vw, 3.5rem);
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0px;
-  line-height: 1.15;
+  line-height: 1.25;
   margin-bottom: var(--spacing-100);
 }
 .gallery .item__artist {
@@ -211,12 +213,10 @@ header .logo svg {
   opacity: 0.75;
 }
 
-@media (min-width: 48rem) {
-  .gallery__grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 @media (min-width: 64rem) {
+  .container {
+    margin: 0 auto;
+  }
   header {
     border: none;
   }
