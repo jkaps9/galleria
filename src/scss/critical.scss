@@ -85,16 +85,15 @@ header {
 
 .gallery {
   margin: var(--spacing-400) 0;
+
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    gap: var(--spacing-500);
-    align-items: end;
+    margin: 0 auto;
   }
 
   &__item {
     position: relative;
-    max-width: 310px;
+
+    margin-bottom: var(--spacing-500);
   }
 
   .item {

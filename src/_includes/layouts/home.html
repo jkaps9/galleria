@@ -2,7 +2,10 @@
 {% block content %}
   <section class="gallery">
     <div class="container">
-      <div class="gallery__grid">
+      <div
+        class="gallery__grid"
+        data-masonry='{ "itemSelector": ".gallery__item", "columnWidth": 310, "gutter": 40, "transitionDuration": 0, "fitWidth": true }'
+      >
         {% for painting in paintings %}
           <div class="gallery__item">
             <img
