@@ -89,6 +89,7 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-500);
+    align-items: end;
   }
 
   &__item {
@@ -115,6 +116,7 @@ header {
     }
   }
 }
+
 @media (min-width: 48rem) {
   .gallery {
     &__grid {
@@ -128,6 +130,12 @@ header {
     border: none;
     .navbar {
       border-bottom: 1px solid var(--grey-150);
+    }
+  }
+
+  .gallery {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
