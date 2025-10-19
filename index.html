@@ -17,6 +17,7 @@
       sizes="32x32"
       href="/galleria/assets/images/favicon-32x32.png"
     />
+    <script src="/galleria/assets/scripts/masonry.pkgd.min.js"></script>
   </head>
   <body>
     <header>
@@ -37,7 +38,10 @@
     <main>
   <section class="gallery">
     <div class="container">
-      <div class="gallery__grid">
+      <div
+        class="gallery__grid"
+        data-masonry='{ "itemSelector": ".gallery__item", "columnWidth": 310, "gutter": 40, "transitionDuration": 0, "fitWidth": true }'
+      >
         
           <div class="gallery__item">
             <img

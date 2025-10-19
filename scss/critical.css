@@ -182,14 +182,11 @@ header .logo svg {
   margin: var(--spacing-400) 0;
 }
 .gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: var(--spacing-500);
-  align-items: end;
+  margin: 0 auto;
 }
 .gallery__item {
   position: relative;
-  max-width: 310px;
+  margin-bottom: var(--spacing-500);
 }
 .gallery .item__details {
   position: absolute;
