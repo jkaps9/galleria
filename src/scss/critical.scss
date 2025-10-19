@@ -87,13 +87,14 @@ header {
   margin: var(--spacing-400) 0;
   &__grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: var(--spacing-500);
     align-items: end;
   }
 
   &__item {
     position: relative;
+    max-width: 310px;
   }
 
   .item {
@@ -106,7 +107,7 @@ header {
     }
 
     &__title {
-      @include mixins.text-preset-2;
+      @include mixins.text-preset-2-mobile;
       margin-bottom: var(--spacing-100);
     }
 
@@ -118,24 +119,16 @@ header {
 }
 
 @media (min-width: 48rem) {
-  .gallery {
-    &__grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
 }
 
 @media (min-width: 64rem) {
+  .container {
+    margin: 0 auto;
+  }
   header {
     border: none;
     .navbar {
       border-bottom: 1px solid var(--grey-150);
-    }
-  }
-
-  .gallery {
-    &__grid {
-      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

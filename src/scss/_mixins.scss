@@ -12,6 +12,13 @@
   line-height: 1.15;
 }
 
+@mixin text-preset-2-mobile {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 1.25;
+}
+
 @mixin text-preset-3 {
   font-size: clamp(0.875rem, 0.6878rem + 0.244vw, 1.125rem);
   font-weight: 700;
