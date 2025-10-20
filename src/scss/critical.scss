@@ -117,6 +117,36 @@ header {
   }
 }
 
+.painting-details {
+  margin: var(--spacing-400) 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item {
+    &__image {
+      z-index: 1;
+      position: relative;
+    }
+
+    &__title {
+      background-color: var(--white);
+      padding: clamp(
+        var(--spacing-300),
+        -0.8855rem + 10.1781vw,
+        var(--spacing-800)
+      );
+      position: relative;
+
+      margin-top: calc(-1 * var(--spacing-700));
+      min-width: 17.625rem;
+      z-index: 10;
+    }
+  }
+}
+
 @media (min-width: 48rem) {
 }
 
