@@ -24,8 +24,9 @@
       </picture>
       <div class="item__title">
         <h2 class="item__name">{{ painting.name }}</h2>
-        <p class="item__artist">{{ painting.artist.name }}</p>
+        <p class="item__artist-name">{{ painting.artist.name }}</p>
         <img
+          class="item__artist-image"
           src="../.{{ painting.artist.image }}"
           alt="{{ painting.artist.name }}"
         />

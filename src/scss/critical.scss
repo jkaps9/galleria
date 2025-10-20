@@ -138,11 +138,28 @@ header {
         -0.8855rem + 10.1781vw,
         var(--spacing-800)
       );
+      padding-bottom: 0;
       position: relative;
 
       margin-top: calc(-1 * var(--spacing-700));
       min-width: 17.625rem;
       z-index: 10;
+    }
+
+    &__name {
+      @include mixins.text-preset-2;
+      margin-bottom: var(--spacing-100);
+    }
+
+    &__artist-name {
+      @include mixins.text-preset-4;
+      color: var(--grey-400);
+      font-size: 0.9375rem;
+      margin-bottom: var(--spacing-300);
+    }
+
+    &__artist-image {
+      max-height: 4rem;
     }
   }
 }
