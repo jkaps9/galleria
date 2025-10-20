@@ -236,20 +236,25 @@ header {
   }
 }
 
-@media (min-width: 48rem) {
-}
-
-@media (min-width: 64rem) {
+@media (min-width: 769px) {
   .container {
     margin: 0 auto;
+    width: 90%;
   }
+  .painting-details {
+    .container {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 80rem) {
   header {
     border: none;
     .navbar {
       border-bottom: 1px solid var(--grey-150);
     }
   }
-
   .painting-details {
     .container {
       flex-direction: row;
