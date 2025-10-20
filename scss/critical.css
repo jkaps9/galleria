@@ -96,10 +96,10 @@ select {
   border: none;
   color: var(--grey-400);
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: clamp(0.5625rem, 0.3836rem + 0.7634vw, 0.75rem);
   font-weight: 700;
-  letter-spacing: 2.571px;
-  line-height: 1;
+  letter-spacing: clamp(2px, 1.5229px + 0.1272vw, 2.5px);
+  line-height: 1.25;
   padding: 0;
   text-align: center;
   text-decoration: none;
@@ -203,9 +203,9 @@ header .logo svg {
   margin-bottom: var(--spacing-100);
 }
 .gallery .item__artist {
-  font-size: clamp(0.5625rem, 0.3869rem + 0.2292vw, 0.8125rem);
+  font-size: clamp(0.5625rem, 0.324rem + 1.0178vw, 0.8125rem);
   font-weight: 400;
-  letter-spacing: clamp(2px, 1.5714px + 0.0558vw, 2.5px);
+  letter-spacing: clamp(0px, 3.9084px - 0.5089vw, 2px);
   line-height: 1.25;
   opacity: 0.75;
 }
