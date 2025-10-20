@@ -99,7 +99,14 @@ header {
     transition: transform 0.1s ease-in-out;
     transform: scale(1);
     transform-origin: center;
-
+    .item__link {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -109,6 +116,7 @@ header {
       bottom: 0;
       background-color: var(--black);
       opacity: 0.25;
+      z-index: 1;
     }
 
     &:hover {
@@ -134,6 +142,10 @@ header {
     &__artist {
       @include mixins.text-preset-5;
       opacity: 0.75;
+    }
+
+    &__image {
+      z-index: 0;
     }
   }
 }
