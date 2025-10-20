@@ -190,8 +190,19 @@ header .logo svg {
   margin: 0 auto;
 }
 .gallery__item {
-  position: relative;
   margin-bottom: var(--spacing-500);
+  position: relative;
+  z-index: 1;
+}
+.gallery__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+  opacity: 0.25;
 }
 .gallery .item__details {
   position: absolute;
@@ -199,6 +210,7 @@ header .logo svg {
   left: 0;
   padding: var(--spacing-400);
   color: var(--color-text-light);
+  z-index: 2;
 }
 .gallery .item__title {
   font-size: 1.5rem;
@@ -321,10 +333,16 @@ header .logo svg {
   gap: clamp(var(--spacing-300), 0.5458rem + 4.0712vw, var(--spacing-500));
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 769px) {
   .container {
     margin: 0 auto;
+    width: 90%;
   }
+  .painting-details .container {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 80rem) {
   header {
     border: none;
   }
