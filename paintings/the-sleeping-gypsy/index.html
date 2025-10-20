@@ -38,11 +38,26 @@
     <main>
   <section class="painting-details">
     <div class="container">
-      <img
-        class="item__image"
-        src="../../assets/images/the-sleeping-gypsy/hero-large.jpg"
-        alt="The Sleeping Gypsy by Henri Rousseau"
-      />
+      <picture>
+        <!-- Large (768px and up) -->
+        <source
+          media="(min-width: 768px)"
+          srcset="../../assets/images/the-sleeping-gypsy/hero-large.jpg"
+        />
+
+        <!-- Small (up to 767px) -->
+        <source
+          media="(max-width: 767px)"
+          srcset="../../assets/images/the-sleeping-gypsy/hero-small.jpg"
+        />
+
+        <!-- Fallback image -->
+        <img
+          class="item__image"
+          src="../../assets/images/the-sleeping-gypsy/hero-small.jpg"
+          alt="The Sleeping Gypsy by Henri Rousseau"
+        />
+      </picture>
       <div class="item__title">
         <h2 class="item__name">The Sleeping Gypsy</h2>
         <p class="item__artist">The Sleeping Gypsy</p>
@@ -59,7 +74,7 @@
       </div>
     </div>
   </section>
-  <footer>
+  <section class="slideshow-footer">
   <div class="container">
     <div class="item__title">
       <h3 class="item__name">The Sleeping Gypsy</h3>
@@ -72,7 +87,7 @@
       <button class="next"><svg width="26" height="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" fill="none" fill-rule="evenodd"><path d="M1.528 1.843l20.538 10.27L1.528 22.382V1.843z" stroke-width="2"/><path fill="#D8D8D8" d="M24.708.5h1v22.775h-1z"/></g></svg></button>
     </div>
   </div>
-</footer>
+</section>
 
 </main>
     <script src="/galleria/main.js"></script>
