@@ -1,0 +1,14 @@
+<footer>
+  <div class="container">
+    <div class="item__title">
+      <h3 class="item__name">{{ painting.name }}</h3>
+      <p class="item__artist">{{ painting.artist.name }}</p>
+    </div>
+    <div class="buttons">
+      <button class="previous">
+        {% include "svgs/icon-back-button.svg" %}
+      </button>
+      <button class="next">{% include "svgs/icon-next-button.svg" %}</button>
+    </div>
+  </div>
+</footer>

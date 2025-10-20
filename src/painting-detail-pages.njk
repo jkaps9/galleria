@@ -1,0 +1,12 @@
+---
+pagination:
+  data: paintings
+  size: 1
+  alias: painting
+permalink: "paintings/{{ painting.slug }}/"
+eleventyComputed: 
+    title: "{{ painting.name }}"
+layout: "layouts/painting-details.html"
+---
+
+{{ painting.name }} is {{ painting.description }}

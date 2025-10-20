@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+  <section class="painting-details">
+    <div class="container">
+      <img
+        class="item__image"
+        src="../.{{ painting.images.hero.large }}"
+        alt="{{ painting.name }} by {{ painting.artist.name }}"
+      />
+      <div class="item__title">
+        <h2 class="item__name">{{ painting.name }}</h2>
+        <p class="item__artist">{{ painting.name }}</p>
+      </div>
+      <div class="item__details">
+        <p class="item__year">{{ painting.year }}</p>
+        <p class="item__description">{{ painting.description }}</p>
+        <a
+          href="{{ painting.source }}"
+          class="btn"
+        >
+          Go to Source
+        </a>
+      </div>
+    </div>
+  </section>
+  {% include "partials/slideshow-footer.html" %}
+{% endblock %}
