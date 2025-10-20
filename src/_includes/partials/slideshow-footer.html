@@ -10,12 +10,37 @@
       <p class="item__artist">{{ painting.artist.name }}</p>
     </div>
     <div class="slideshow-footer__buttons">
-      <button class="previous btn btn--disabled">
-        {% include "svgs/icon-back-button.svg" %}
-      </button>
-      <button class="next btn">
-        {% include "svgs/icon-next-button.svg" %}
-      </button>
+      {% if pagination.href.previous %}
+        <a
+          href="{{ pagination.href.previous | url }}"
+          class="previous btn"
+        >
+          {% include "svgs/icon-back-button.svg" %}
+        </a>
+      {% else %}
+        <button
+          class="previous btn btn--disabled"
+          disabled
+        >
+          {% include "svgs/icon-back-button.svg" %}
+        </button>
+      {% endif %}
+
+      {% if pagination.href.next %}
+        <a
+          href="{{ pagination.href.next | url }}"
+          class="next btn"
+        >
+          {% include "svgs/icon-next-button.svg" %}
+        </a>
+      {% else %}
+        <button
+          class="next btn btn--disabled"
+          disabled
+        >
+          {% include "svgs/icon-next-button.svg" %}
+        </button>
+      {% endif %}
     </div>
   </div>
 </section>
