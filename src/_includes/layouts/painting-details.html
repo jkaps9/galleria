@@ -24,7 +24,11 @@
       </picture>
       <div class="item__title">
         <h2 class="item__name">{{ painting.name }}</h2>
-        <p class="item__artist">{{ painting.name }}</p>
+        <p class="item__artist">{{ painting.artist.name }}</p>
+        <img
+          src="../.{{ painting.artist.image }}"
+          alt="{{ painting.artist.name }}"
+        />
       </div>
       <div class="item__details">
         <p class="item__year">{{ painting.year }}</p>
