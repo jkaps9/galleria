@@ -8,7 +8,21 @@
       >
         {% include "svgs/logo.svg" %}
       </a>
-      <button class="btn">Start Slideshow</button>
+      {% if title === "Home" %}
+        <a
+          class="btn"
+          href="{{ './paintings/starry-night/' | url }}"
+        >
+          Start Slideshow
+        </a>
+      {% else %}
+        <a
+          class="btn"
+          href="{{ '/' | url }}"
+        >
+          Stop Slideshow
+        </a>
+      {% endif %}
     </div>
   </div>
 </header>

@@ -99,6 +99,7 @@ header {
     transition: transform 0.1s ease-in-out;
     transform: scale(1);
     transform-origin: center;
+
     .item__link {
       position: absolute;
       top: 0;
@@ -107,6 +108,7 @@ header {
       right: 0;
       z-index: 10;
     }
+
     &::after {
       content: "";
       position: absolute;
