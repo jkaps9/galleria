@@ -1,4 +1,9 @@
 <section class="slideshow-footer">
+  {% set progressWidth = (paintingIndex / paintings.length) * 100 %}
+  <div
+    class="slideshow-footer__progress-bar"
+    {% if progressWidth %}style="width: {{ progressWidth }}%;"{% endif %}
+  ></div>
   <div class="container">
     <div class="item__title">
       <h3 class="item__name">{{ painting.name }}</h3>

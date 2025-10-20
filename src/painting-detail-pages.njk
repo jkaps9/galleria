@@ -6,6 +6,7 @@ pagination:
 permalink: "paintings/{{ painting.slug }}/"
 eleventyComputed: 
     title: "{{ painting.name }}"
+    paintingIndex: "{{ pagination.pageNumber }}"
 layout: "layouts/painting-details.html"
 ---
 
