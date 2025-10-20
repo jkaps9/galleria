@@ -333,6 +333,7 @@ header .logo svg {
   }
   .painting-details .container {
     flex-direction: row;
+    margin: 0 auto;
   }
   .painting-details .item__image {
     max-width: 29.6875rem;
