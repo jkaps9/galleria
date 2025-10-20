@@ -23,8 +23,10 @@
         />
       </picture>
       <div class="item__title">
-        <h2 class="item__name">{{ painting.name }}</h2>
-        <p class="item__artist-name">{{ painting.artist.name }}</p>
+        <div class="item__title-text">
+          <h2 class="item__name">{{ painting.name }}</h2>
+          <p class="item__artist-name">{{ painting.artist.name }}</p>
+        </div>
         <img
           class="item__artist-image"
           src="../.{{ painting.artist.image }}"
