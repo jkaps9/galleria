@@ -95,6 +95,10 @@ header {
     margin-bottom: var(--spacing-500);
     position: relative;
     z-index: 1;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    transform: scale(1);
+    transform-origin: center;
 
     &::after {
       content: "";
@@ -105,6 +109,10 @@ header {
       bottom: 0;
       background-color: var(--black);
       opacity: 0.25;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 
