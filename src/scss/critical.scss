@@ -35,6 +35,7 @@
   // CONTAINER
   --container-max-width: 85rem;
   --container-margin: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+  --container-margin-slideshow: clamp(1.5rem, 0.5458rem + 4.0712vw, 2.5rem);
 
   // SPACING
   --spacing-0: 0;
@@ -123,6 +124,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 0 var(--container-margin-slideshow);
   }
 
   .item {
@@ -160,6 +162,30 @@ header {
 
     &__artist-image {
       max-height: 4rem;
+      margin-left: calc(-1 * var(--spacing-100));
+    }
+
+    &__details {
+      margin-top: calc(-1 * var(--spacing-200));
+      margin-bottom: var(--spacing-1000);
+      z-index: 20;
+    }
+
+    &__year {
+      @include mixins.text-preset-1;
+      color: var(--grey-100);
+      line-height: 1;
+      text-align: right;
+    }
+
+    &__description {
+      color: var(--grey-400);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: -0.25px;
+      line-height: 2;
+      margin-top: calc(-1 * var(--spacing-400));
+      margin-bottom: var(--spacing-800);
     }
   }
 }
