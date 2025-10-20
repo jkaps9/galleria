@@ -190,6 +190,35 @@ header {
   }
 }
 
+.slideshow-footer {
+  border-top: 1px solid var(--grey-150);
+  padding: clamp(var(--spacing-200), 0.5229rem + 2.0356vw, var(--spacing-300))
+    clamp(var(--spacing-300), 0.5458rem + 4.0712vw, var(--spacing-500));
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .item {
+    &__name {
+      @include mixins.text-preset-3;
+      margin-bottom: var(--spacing-100);
+    }
+
+    &__artist {
+      @include mixins.text-preset-4;
+      opacity: 0.75;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: clamp(var(--spacing-300), 0.5458rem + 4.0712vw, var(--spacing-500));
+  }
+}
+
 @media (min-width: 48rem) {
 }
 
